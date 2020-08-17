@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Black Jack</title>
+
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h2 class="title">
+      Back Jack!
+    </h2>
+  </header>
+
+  <div class="container">
+
+    <div class="row mt-2">
+      <div class="col-12 text-center">
+        <button id="btnNewGame" class="btn btn-danger">Nuevo Juego</button>
+        <button id="btnGetCard" class="btn btn-primary">Pedir Carta</button>
+        <button id="btnStop" class="btn btn-warning">Detener</button>
+      </div>
+    </div>
+
+
+    <div class="row mt-2">
+      <div class="col-12">
+
+        <h1>Jugador 1 - <small>0</small></h1>
+
+        <div id="user-cards" class="card-container">
+          <!-- <img src="assets/cartas/10C.png" alt=""> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col-12">
+
+        <h1>Computadora 1 - <small>0</small></h1>
+
+        <div id="computer-cards" class="card-container">
+          <!-- <img src="assets/cartas/10C.png" alt=""> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/juego.js"></script>
+  <script>
+    moduleBlackJack.newGame();
+    document.querySelector('#btnNewGame').addEventListener('click', ()=>{
+      moduleBlackJack.newGame();
+    })
+  </script>
+</body>
+</html>
