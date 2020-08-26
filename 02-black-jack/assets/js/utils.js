@@ -1,5 +1,3 @@
-console.log( 'utils OK!' );
-
 const shuffle = ( array ) => {
   let m = array.length, t, i;
 
